@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diário Oficial · Monitoramento</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="title">Diário Oficial · Monitoramento</div>
+        <div class="subtitle">Status, execuções, encontrados e operação manual do fluxo diário.</div>
+      </div>
+
+      <div class="actions">
+        <button id="btnRefresh" class="btn ghost">Atualizar</button>
+        <button id="btnTrigger" class="btn primary">Forçar fluxo</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="cards">
+        <div class="card">
+          <div class="cardHead">
+            <div class="cardTitle">Última execução</div>
+            <span id="pillLastRun" class="pill idle">Sem execuções</span>
+          </div>
+
+          <div class="grid2">
+            <div class="info">
+              <div class="label">Run ID</div>
+              <div id="lastRunId" class="value">—</div>
+            </div>
+            <div class="info">
+              <div class="label">Início</div>
+              <div id="lastRunStart" class="value">—</div>
+            </div>
+            <div class="info">
+              <div class="label">Fim</div>
+              <div id="lastRunEnd" class="value">—</div>
+            </div>
+            <div class="info">
+              <div class="label">Verificados</div>
+              <div id="lastRunChecked" class="value">—</div>
+            </div>
+            <div class="info">
+              <div class="label">Encontrados</div>
+              <div id="lastRunMatches" class="value">—</div>
+            </div>
+            <div class="info">
+              <div class="label">Fonte</div>
+              <div id="lastRunSource" class="value">—</div>
+            </div>
+          </div>
+
+          <div id="lastRunError" class="callout err hidden">
+            <div class="calloutTitle">Falha</div>
+            <div id="lastRunErrorMsg" class="calloutBody">—</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardHead">
+            <div class="cardTitle">Agendamento</div>
+            <span class="pill ok">08:00</span>
+          </div>
+
+          <div class="grid2">
+            <div class="info">
+              <div class="label">Timezone</div>
+              <div id="tz" class="value">America/Sao_Paulo</div>
+            </div>
+            <div class="info">
+              <div class="label">Agora</div>
+              <div id="now" class="value">—</div>
+            </div>
+            <div class="info">
+              <div class="label">Próxima execução</div>
+              <div id="nextRun" class="value">—</div>
+            </div>
+            <div class="info">
+              <div class="label">Modo</div>
+              <div id="mode" class="value">Mock (front-only)</div>
+            </div>
+          </div>
+
+          <div class="hint">
+            Quando tiver backend, este painel passa a consumir dados reais. Por enquanto, tudo aqui é simulado.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardHead">
+            <div class="cardTitle">Operação</div>
+            <span id="pillOp" class="pill idle">Pronto</span>
+          </div>
+
+          <div class="hint">
+            Use <b>Forçar fluxo</b> quando quiser rodar manualmente. Se algo der errado, os logs ajudam a identificar onde falhou.
+          </div>
+
+          <div class="hint small">
+            No backend, isso vira: <code>POST /api/runs/trigger</code>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <nav class="tabs">
+          <button class="tab active" data-tab="overview">Visão geral</button>
+          <button class="tab" data-tab="matches">Encontrados</button>
+          <button class="tab" data-tab="runs">Execuções</button>
+          <button class="tab" data-tab="people">Pessoas</button>
+          <button class="tab" data-tab="logs">Logs</button>
+        </nav>
+
+        <div class="content">
+          <!-- OVERVIEW -->
+          <div class="tabPane" id="tab-overview">
+            <h2>Resumo</h2>
+            <div class="grid3">
+              <div class="kpi">
+                <div class="kpiTitle">Status</div>
+                <div id="kpiStatus" class="kpiValue">—</div>
+              </div>
+              <div class="kpi">
+                <div class="kpiTitle">Run selecionado</div>
+                <div id="kpiRun" class="kpiValue">—</div>
+              </div>
+              <div class="kpi">
+                <div class="kpiTitle">Encontrados</div>
+                <div id="kpiFound" class="kpiValue">—</div>
+              </div>
+            </div>
+
+            <div class="split">
+              <div>
+                <h3>Últimos encontrados</h3>
+                <div id="miniMatches" class="mini"></div>
+              </div>
+
+              <div>
+                <h3>Últimas execuções</h3>
+                <div id="miniRuns" class="mini"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MATCHES -->
+          <div class="tabPane hidden" id="tab-matches">
+            <h2>Encontrados</h2>
+            <div class="hint">Lista de ocorrências detectadas no HTML do diário (mock).</div>
+
+            <div class="table" id="tableMatches"></div>
+          </div>
+
+          <!-- RUNS -->
+          <div class="tabPane hidden" id="tab-runs">
+            <h2>Execuções</h2>
+            <div class="hint">Histórico do fluxo. Clique em uma execução para ver os logs.</div>
+
+            <div class="table" id="tableRuns"></div>
+          </div>
+
+          <!-- PEOPLE -->
+          <div class="tabPane hidden" id="tab-people">
+            <h2>Pessoas</h2>
+            <div class="hint">Cadastro base (nome/RF) que o backend vai fornecer.</div>
+
+            <div class="toolbar">
+              <input id="peopleFilter" class="input" placeholder="Filtrar por nome, RF, ativo/inativo…" />
+              <button id="btnClearPeopleFilter" class="btn ghost">Limpar</button>
+            </div>
+
+            <div class="table" id="tablePeople"></div>
+          </div>
+
+          <!-- LOGS -->
+          <div class="tabPane hidden" id="tab-logs">
+            <h2>Logs</h2>
+            <div class="toolbar">
+              <div class="hint">Run: <code id="logsRunId">—</code></div>
+              <button id="btnReloadLogs" class="btn ghost">Recarregar logs</button>
+            </div>
+
+            <div class="logs">
+              <div class="logsHead">
+                <div class="hint small">Linhas de log (mock)</div>
+              </div>
+              <div id="logBox" class="logBox"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="toast" class="toast hidden"></div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
