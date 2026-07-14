@@ -1,11 +1,10 @@
 const BASE_URL = 'https://raw.githubusercontent.com/GustavoFantato/diariooficial-web/main';
 const COL_CONFIG_PEOPLE = "2fr 1fr 1fr";
-const COL_CONFIG_MATCHES = "2fr 1fr 1fr";
 const COL_CONFIG_RUNS = "1fr 1fr 2fr";
 
 let listaOriginal = [];
 
-// --- 1. CARREGAR PESSOAS (CSV) ---
+// --- 1. CARREGAR PESSOAS ---
 async function carregarDadosCSV() {
     const tablePeople = document.getElementById('tablePeople');
     try {
@@ -23,11 +22,8 @@ async function carregarDadosCSV() {
                 rf_vinculo_formatado: colunas[3]?.trim() || '' 
             };
         });
-
         renderTabelaPessoas(listaOriginal);
-    } catch (e) {
-        tablePeople.innerHTML = `<div style="padding:15px; color: #ff5a5a;">${e.message}</div>`;
-    }
+    } catch (e) { console.error(e); }
 }
 
 function renderTabelaPessoas(lista) {
@@ -46,18 +42,18 @@ function renderTabelaPessoas(lista) {
     `;
 }
 
-// --- 2. CARREGAR ENCONTRADOS (JSON) ---
+// --- 2. CARREGAR ENCONTRADOS ---
 async function carregarEncontrados() {
     const containerCEI = document.getElementById('tableMatchesCEI');
     const containerEMEI = document.getElementById('tableMatchesEMEI');
     
     try {
         const response = await fetch(`${BASE_URL}/outputs/encontrados.json?t=${Date.now()}`);
-        if (!response.ok) throw new Error("Arquivo não encontrado");
+        if (!response.ok) throw new Error("Erro ao carregar encontrados");
         
         const data = await response.json();
-        const cei = data.filter(item => item.TIPO === 'CEI');
-        const emei = data.filter(item => item.TIPO === 'EMEI');
+        const cei = data.filter(item => String(item.TIPO).toUpperCase().includes('CEI'));
+        const emei = data.filter(item => String(item.TIPO).toUpperCase().includes('EMEI'));
 
         const gerarHTML = (lista) => lista.length > 0 ? `
             <div class="row head" style="grid-template-columns: 2fr 1fr;">
@@ -74,7 +70,6 @@ async function carregarEncontrados() {
         containerEMEI.innerHTML = gerarHTML(emei);
     } catch (e) { 
         console.error("Erro ao carregar encontrados:", e);
-        containerCEI.innerHTML = "Erro ao carregar dados.";
     }
 }
 
@@ -97,32 +92,18 @@ async function carregarExecucoes() {
     } catch (e) { console.error("Erro ao carregar execuções:", e); }
 }
 
-// --- FILTRAGEM ---
+// --- 4. FILTRAGEM (SEARCH BAR) ---
 function aplicarFiltros() {
     const termo = document.getElementById('peopleFilter').value.toLowerCase();
-    const unidadeSelecionada = document.getElementById('unitFilter').value;
-
     const listaFiltrada = listaOriginal.filter(p => {
-        // Garantir que tudo seja convertido para string antes de comparar
-        const nome = (p.nome || '').toLowerCase();
-        const unidade = (p.unidade || '').toLowerCase();
-        const rf = (p.rf_vinculo_formatado || '').toLowerCase();
-        
-        const matchTexto = nome.includes(termo) || 
-                           unidade.includes(termo) || 
-                           rf.includes(termo);
-        
-        // Ajuste no matchUnidade para ser mais preciso
-        const matchUnidade = unidadeSelecionada === "TODOS" || 
-                             unidade.toUpperCase().includes(unidadeSelecionada.toUpperCase());
-
-        return matchTexto && matchUnidade;
+        return p.nome.toLowerCase().includes(termo) || 
+               p.unidade.toLowerCase().includes(termo) || 
+               p.rf_vinculo_formatado.toLowerCase().includes(termo);
     });
-
     renderTabelaPessoas(listaFiltrada);
 }
 
-// --- EVENT LISTENERS ---
+// --- 5. EVENT LISTENERS E INICIALIZAÇÃO ---
 document.querySelectorAll('.tab').forEach(button => {
     button.addEventListener('click', () => {
         document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
@@ -133,9 +114,7 @@ document.querySelectorAll('.tab').forEach(button => {
 });
 
 document.getElementById('peopleFilter').addEventListener('input', aplicarFiltros);
-document.getElementById('unitFilter').addEventListener('change', aplicarFiltros);
 
-// Inicialização
 carregarDadosCSV();
 carregarEncontrados();
 carregarExecucoes();
