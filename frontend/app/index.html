@@ -11,9 +11,6 @@
       <div class="brand">
         <div class="title">Diário Oficial · Monitoramento</div>
       </div>
-      <div class="actions">
-        <button id="btnTrigger" class="btn primary">Forçar Fluxo de Verificação</button>
-      </div>
     </header>
 
     <main class="main">
@@ -24,26 +21,21 @@
       </nav>
 
       <div class="content">
-        <!-- MATCHES -->
         <div class="tabPane" id="tab-matches">
           <h2>Resultados Encontrados</h2>
           <div id="tableMatches" class="table"></div>
         </div>
 
-        <!-- RUNS -->
         <div class="tabPane hidden" id="tab-runs">
           <h2>Histórico de Execuções</h2>
           <div id="tableRuns" class="table"></div>
         </div>
 
-        <!-- PEOPLE -->
         <div class="tabPane hidden" id="tab-people">
           <h2>Base de Pessoas</h2>
-          
           <div class="toolbar">
             <input id="peopleFilter" class="input" placeholder="Filtrar por nome ou RF..." />
           </div>
-
           <div id="tablePeople" class="table"></div>
         </div>
       </div>

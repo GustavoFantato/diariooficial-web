@@ -1,4 +1,3 @@
-// --- CONFIGURAÇÕES ---
 const BASE_URL = 'https://raw.githubusercontent.com/GustavoFantato/diariooficial-web/main';
 const COL_CONFIG_PEOPLE = "2fr 1fr 1fr";
 const COL_CONFIG_MATCHES = "2fr 1fr 1fr";
@@ -6,7 +5,6 @@ const COL_CONFIG_RUNS = "1fr 1fr 2fr";
 
 let listaOriginal = [];
 
-// --- 1. CARREGAR PESSOAS (CSV) ---
 async function carregarDadosCSV() {
     const tablePeople = document.getElementById('tablePeople');
     try {
@@ -42,7 +40,6 @@ function renderTabelaPessoas(lista) {
     `;
 }
 
-// --- 2. CARREGAR ENCONTRADOS (JSON) ---
 async function carregarEncontrados() {
     try {
         const response = await fetch(`${BASE_URL}/outputs/encontrados.json?t=${Date.now()}`);
@@ -61,7 +58,6 @@ async function carregarEncontrados() {
     } catch (e) { console.error("Erro ao carregar encontrados:", e); }
 }
 
-// --- 3. HISTÓRICO DE EXECUÇÕES (GITHUB API) ---
 async function carregarExecucoes() {
     try {
         const response = await fetch('https://api.github.com/repos/GustavoFantato/diariooficial-web/actions/workflows/diario_automatico.yml/runs');
@@ -80,41 +76,6 @@ async function carregarExecucoes() {
     } catch (e) { console.error("Erro ao carregar execuções:", e); }
 }
 
-// --- 4. DISPARAR FLUXO ---
-document.getElementById('btnTrigger').addEventListener('click', async () => {
-    const btn = document.getElementById('btnTrigger');
-    btn.disabled = true;
-    btn.innerText = "Disparando...";
-    
-    const GITHUB_TOKEN = ''; 
-
-    try {
-        const response = await fetch(`https://api.github.com/repos/GustavoFantato/diariooficial-web/actions/workflows/diario_automatico.yml/dispatches`, {
-            method: 'POST',
-            headers: { 
-                'Authorization': `token ${GITHUB_TOKEN}`, 
-                'Accept': 'application/vnd.github.v3+json' 
-            },
-            body: JSON.stringify({ ref: 'main' })
-        });
-
-        if (response.status === 204) {
-            alert("Sucesso! O fluxo foi disparado. Aguarde alguns segundos.");
-        } else {
-            const err = await response.json();
-            alert("Erro ao disparar: " + (err.message || "Verifique o console"));
-            console.error(err);
-        }
-    } catch (e) { 
-        alert("Erro de conexão ao disparar fluxo."); 
-        console.error(e);
-    }
-    
-    btn.disabled = false;
-    btn.innerText = "Forçar Fluxo de Verificação";
-});
-
-// --- LÓGICA DE ABAS E BUSCA ---
 document.querySelectorAll('.tab').forEach(button => {
     button.addEventListener('click', () => {
         document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
@@ -129,7 +90,6 @@ document.getElementById('peopleFilter').addEventListener('input', (e) => {
     renderTabelaPessoas(listaOriginal.filter(p => p.nome.toLowerCase().includes(termo) || p.rf.includes(termo)));
 });
 
-// Inicialização
 carregarDadosCSV();
 carregarEncontrados();
 carregarExecucoes();
