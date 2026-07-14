@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diário Oficial · Monitoramento</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="title">Diário Oficial · Monitoramento</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <nav class="tabs">
+        <button class="tab active" data-tab="matches">Encontrados</button>
+        <button class="tab" data-tab="runs">Execuções</button>
+        <button class="tab" data-tab="people">Pessoas</button>
+      </nav>
+
+      <div class="content">
+        <div class="tabPane" id="tab-matches">
+          <h2>Resultados Encontrados</h2>
+          <div id="tableMatches" class="table"></div>
+        </div>
+
+        <div class="tabPane hidden" id="tab-runs">
+          <h2>Histórico de Execuções</h2>
+          <div id="tableRuns" class="table"></div>
+        </div>
+
+        <div class="tabPane hidden" id="tab-people">
+          <h2>Base de Pessoas</h2>
+          <div class="toolbar">
+            <input id="peopleFilter" class="input" placeholder="Filtrar por nome ou RF..." />
+          </div>
+          <div id="tablePeople" class="table"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
