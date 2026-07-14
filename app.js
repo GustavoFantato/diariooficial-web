@@ -103,11 +103,18 @@ function aplicarFiltros() {
     const unidadeSelecionada = document.getElementById('unitFilter').value;
 
     const listaFiltrada = listaOriginal.filter(p => {
-        const matchTexto = p.nome.toLowerCase().includes(termo) || 
-                           p.unidade.toLowerCase().includes(termo) || 
-                           p.rf_vinculo_formatado.toLowerCase().includes(termo);
+        // Garantir que tudo seja convertido para string antes de comparar
+        const nome = (p.nome || '').toLowerCase();
+        const unidade = (p.unidade || '').toLowerCase();
+        const rf = (p.rf_vinculo_formatado || '').toLowerCase();
         
-        const matchUnidade = unidadeSelecionada === "TODOS" || p.unidade.includes(unidadeSelecionada);
+        const matchTexto = nome.includes(termo) || 
+                           unidade.includes(termo) || 
+                           rf.includes(termo);
+        
+        // Ajuste no matchUnidade para ser mais preciso
+        const matchUnidade = unidadeSelecionada === "TODOS" || 
+                             unidade.toUpperCase().includes(unidadeSelecionada.toUpperCase());
 
         return matchTexto && matchUnidade;
     });
