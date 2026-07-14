@@ -1,0 +1,18 @@
+name: Deploy Frontend para GitHub Pages
+
+on:
+  push:
+    branches: [ main ] # Roda quando você faz push na main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: frontend/app # Pasta que você quer publicar
+          branch: gh-pages # Branch onde o site vai morar
