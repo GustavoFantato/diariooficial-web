@@ -25,10 +25,15 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Instalar dependências
+      - name: Instalar dependências Python
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Instalar ferramentas de sistema (poppler-utils)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
 
       - name: Rodar scripts
         run: |
