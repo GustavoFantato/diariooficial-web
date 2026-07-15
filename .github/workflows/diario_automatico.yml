@@ -5,6 +5,9 @@ on:
     branches:
       - main
   schedule:
+    # 07:00 BRT -> 10:00 UTC (seg a sex)
+    - cron: '0 10 * * 1-5'
+    # 08:00 BRT -> 11:00 UTC (seg a sex)
     - cron: '0 11 * * 1-5'
   workflow_dispatch:
 

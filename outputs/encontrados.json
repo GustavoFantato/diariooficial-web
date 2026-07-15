@@ -1,14 +1,11 @@
 [
     {
         "NOME": "MARINA ZANGARI SANTANA",
-        "RF": "7495811",
-        "RF_VINCULO": "7495811/1",
+        "UNIDADE": "CEI",
+        "RF": "495811",
+        "RF_VINCULO": "495811/1",
+        "NOME_SEM_ACENTO": "MARINA ZANGARI SANTANA",
+        "RF_COM_PONTOS": "49.581.1",
         "TIPO": "CEI"
-    },
-    {
-        "NOME": "LEDA VIEIRA BORGES SENO",
-        "RF": "8043663",
-        "RF_VINCULO": "8043663/2",
-        "TIPO": "EMEI"
     }
 ]
