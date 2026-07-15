@@ -4,6 +4,7 @@ on:
   push:           
     branches:
       - main
+  workflow_dispatch:
   schedule:
     # 06:55 BRT -> 09:55 UTC
     - cron: '55 09 * * 1-5'
@@ -11,7 +12,6 @@ on:
     - cron: '55 10 * * 1-5'
     # 14:00 BRT -> 12:00 UTC
     - cron: '50 17 * * *'
-  workflow_dispatch:
 
 jobs:
   executar-e-deploy:
