@@ -11,7 +11,7 @@ on:
     # 07:55 BRT -> 10:55 UTC 
     - cron: '55 10 * * 1-5'
     # 14:00 BRT -> 12:00 UTC
-    - cron: '50 17 * * *'
+    - cron: '05 18 * * *'
 
 jobs:
   executar-e-deploy:
