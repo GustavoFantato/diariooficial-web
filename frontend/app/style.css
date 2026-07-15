@@ -82,4 +82,27 @@ h2 { margin: 0 0 12px; font-size: 18px; font-weight: 650; }
 .table .row.head { background: rgba(255, 255, 255, 0.03); font-size: 12px; opacity: 0.85; border-top: none; }
 .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; opacity: 0.92; }
 
+/* Ajuste para que o Nome tenha o mesmo tamanho dos dados */
+.table .value {
+    font-size: 13px; /* Igual ou bem próximo ao .mono */
+    font-weight: 500; /* Nem muito fino, nem muito grosso */
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Impede que o nome "empurre" as outras colunas */
+}
+
+/* Garante que o mono (RF, etc) também fique alinhado */
+.table .mono {
+    font-size: 13px;
+    font-family: ui-monospace, monospace;
+}
+
 .hidden { display: none; }
+
+/* Destaque simples de sublinhado */
+.highlight-match {
+    border-bottom: 2px solid #8b98b9 !important;
+    padding-bottom: 2px;
+    font-weight: 600;
+}

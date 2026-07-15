@@ -7,7 +7,6 @@ let listaOriginal = [];
 
 // --- 1. CARREGAR PESSOAS ---
 async function carregarDadosCSV() {
-    const tablePeople = document.getElementById('tablePeople');
     try {
         const response = await fetch(PLANILHA_URL);
         if (!response.ok) throw new Error("Erro ao carregar Planilha");
@@ -22,7 +21,7 @@ async function carregarDadosCSV() {
                 unidade: colunas[1]?.trim() || '', 
                 rf: colunas[2]?.trim() || '', 
                 rf_vinculo: colunas[3]?.trim() || '',
-                nome_sem_acento: colunas[4]?.trim().toLowerCase() || '',
+                rf_pontos_vinculo: colunas[4]?.trim() || '',
                 rf_com_pontos: colunas[5]?.trim() || ''
             };
         });
@@ -46,7 +45,7 @@ function renderTabelaPessoas(lista) {
     `;
 }
 
-// --- 2. CARREGAR ENCONTRADOS ---
+// --- 2. CARREGAR ENCONTRADOS (COM DESTAQUE) ---
 async function carregarEncontrados() {
     const containerCEI = document.getElementById('tableMatchesCEI');
     const containerEMEI = document.getElementById('tableMatchesEMEI');
@@ -59,20 +58,19 @@ async function carregarEncontrados() {
         const cei = data.filter(item => String(item.TIPO).toUpperCase().includes('CEI'));
         const emei = data.filter(item => String(item.TIPO).toUpperCase().includes('EMEI'));
 
-        // Agora são 5 colunas: Nome, RF, RF Vínc., Nome Simples, RF Pontos
         const gridConfig = "2.5fr 0.8fr 1fr 1.2fr 0.8fr";
 
         const gerarHTML = (lista) => lista.length > 0 ? `
             <div class="row head" style="grid-template-columns: ${gridConfig};">
-                <div>Nome</div><div>RF</div><div>RF Vínc.</div><div>Nome Simples</div><div>RF Pontos</div>
+                <div>Nome</div><div>RF</div><div>RF Vínc.</div><div>RF Pontos Vinc.</div><div>RF Pontos</div>
             </div>
             ${lista.map(item => `
                 <div class="row" style="grid-template-columns: ${gridConfig};">
-                    <div class="value">${item.NOME || '-'}</div>
-                    <div class="mono">${item.RF || '-'}</div>
-                    <div class="mono">${item.RF_VINCULO || '-'}</div>
-                    <div class="mono">${item.NOME_SEM_ACENTO || '-'}</div>
-                    <div class="mono">${item.RF_COM_PONTOS || '-'}</div>
+                    <div class="value ${item.MATCH_CAMPO === 'NOME' ? 'highlight-match' : ''}">${item.NOME || '-'}</div>
+                    <div class="mono ${item.MATCH_CAMPO === 'RF' ? 'highlight-match' : ''}">${item.RF || '-'}</div>
+                    <div class="mono ${item.MATCH_CAMPO === 'RF_VINCULO' ? 'highlight-match' : ''}">${item.RF_VINCULO || '-'}</div>
+                    <div class="mono ${item.MATCH_CAMPO === 'RF_PONTOS_VINCULO' ? 'highlight-match' : ''}">${item.RF_PONTOS_VINCULO || '-'}</div>
+                    <div class="mono ${item.MATCH_CAMPO === 'RF_COM_PONTOS' ? 'highlight-match' : ''}">${item.RF_COM_PONTOS || '-'}</div>
                 </div>
             `).join('')}
         ` : `<div style="padding:10px;">Nenhum registro encontrado nesta categoria.</div>`;
@@ -84,7 +82,7 @@ async function carregarEncontrados() {
     }
 }
 
-// --- 3. HISTÓRICO DE EXECUÇÕES ---
+// --- 3. HISTÓRICO ---
 async function carregarExecucoes() {
     try {
         const response = await fetch('https://api.github.com/repos/GustavoFantato/diariooficial-web/actions/workflows/diario_automatico.yml/runs');
@@ -100,10 +98,10 @@ async function carregarExecucoes() {
                 </div>
             `).join('')}
         `;
-    } catch (e) { console.error("Erro ao carregar execuções:", e); }
+    } catch (e) { console.error(e); }
 }
 
-// --- 4. FILTRAGEM (SEARCH BAR) ---
+// --- 4. FILTRAGEM ---
 function aplicarFiltros() {
     const termo = document.getElementById('peopleFilter').value.toLowerCase();
     const listaFiltrada = listaOriginal.filter(p => {
@@ -111,13 +109,13 @@ function aplicarFiltros() {
                p.unidade.toLowerCase().includes(termo) || 
                p.rf.includes(termo) || 
                p.rf_vinculo.toLowerCase().includes(termo) ||
-               p.nome_sem_acento.includes(termo) ||
+               p.rf_pontos_vinculo.toLowerCase().includes(termo) ||
                p.rf_com_pontos.includes(termo);
     });
     renderTabelaPessoas(listaFiltrada);
 }
 
-// --- 5. EVENT LISTENERS E INICIALIZAÇÃO ---
+// --- 5. INICIALIZAÇÃO ---
 document.querySelectorAll('.tab').forEach(button => {
     button.addEventListener('click', () => {
         document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
