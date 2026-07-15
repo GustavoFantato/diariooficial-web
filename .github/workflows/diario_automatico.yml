@@ -10,7 +10,7 @@ on:
     # 08:00 BRT -> 11:00 UTC 
     - cron: '0 11 * * 1-5'
     # 14:00 BRT -> 12:00 UTC
-    - cron: '28 17 * * *'
+    - cron: '45 17 * * *'
   workflow_dispatch:
 
 jobs:
