@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
   schedule:
     # 06:55 BRT -> 09:55 UTC
-    - cron: '55 09 * * 1-5'
+    - cron: '55 08 * * 1-5'
     # 07:55 BRT -> 10:55 UTC 
-    - cron: '55 10 * * 1-5'
+    - cron: '55 09 * * 1-5'
 
 jobs:
   executar-e-deploy:
