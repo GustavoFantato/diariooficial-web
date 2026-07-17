@@ -1,52 +1,32 @@
 [
     {
-        "NOME": "LAURA SOARES GONCALVES",
-        "UNIDADE": "CEI",
-        "RF": "8212937",
-        "RF_VINCULO": "8212937/2",
-        "RF_PONTOS_VINCULO": "821.293.7/2",
-        "RF_COM_PONTOS": "821.293.7",
-        "TIPO": "CEI",
-        "MATCH_CAMPO": "NOME"
-    },
-    {
-        "NOME": "MILENA PALAZZI DA SILVA",
-        "UNIDADE": "CEI",
-        "RF": "8146462",
-        "RF_VINCULO": "8146462/3",
-        "RF_PONTOS_VINCULO": "814.646.2/3",
-        "RF_COM_PONTOS": "814.646.2",
-        "TIPO": "CEI",
-        "MATCH_CAMPO": "NOME"
-    },
-    {
-        "NOME": "NATHALI RIBEIRO SANCHES",
-        "UNIDADE": "CEI",
-        "RF": "8446890",
-        "RF_VINCULO": "8446890/1",
-        "RF_PONTOS_VINCULO": "844.689.0/1",
-        "RF_COM_PONTOS": "844.689.0",
-        "TIPO": "CEI",
+        "NOME": "MARIA JOSINETE DOS SANTOS FERREIRA",
+        "UNIDADE": "EMEI",
+        "RF": "8097593",
+        "RF_VINCULO": "8097593/1",
+        "RF_PONTOS_VINCULO": "809.759.3/1",
+        "RF_COM_PONTOS": "809.759.3",
+        "TIPO": "EMEI",
         "MATCH_CAMPO": "RF_PONTOS_VINCULO"
     },
     {
-        "NOME": "TATIANE CUSTODIA DE FIGUEIREDO MENEZES",
-        "UNIDADE": "CEI",
-        "RF": "9432558",
-        "RF_VINCULO": "9432558/1",
-        "RF_PONTOS_VINCULO": "943.255.8/1",
-        "RF_COM_PONTOS": "943.255.8",
-        "TIPO": "CEI",
-        "MATCH_CAMPO": "RF_PONTOS_VINCULO"
+        "NOME": "TEREZA RODRIGUES PAES",
+        "UNIDADE": "EMEI",
+        "RF": "8861951",
+        "RF_VINCULO": "8861951/1",
+        "RF_PONTOS_VINCULO": "886.195.1/1",
+        "RF_COM_PONTOS": "886.195.1",
+        "TIPO": "EMEI",
+        "MATCH_CAMPO": "NOME"
     },
     {
-        "NOME": "VALDEMIR DA SILVA NERIS",
+        "NOME": "ANA HELENA ZAMARIAN DE SIQUEIRA",
         "UNIDADE": "CEI",
-        "RF": "8158851",
-        "RF_VINCULO": "8158851/1",
-        "RF_PONTOS_VINCULO": "815.885.1/1",
-        "RF_COM_PONTOS": "815.885.1",
+        "RF": "9343202",
+        "RF_VINCULO": "9343202/2",
+        "RF_PONTOS_VINCULO": "934.320.2/2",
+        "RF_COM_PONTOS": "934.320.2",
         "TIPO": "CEI",
-        "MATCH_CAMPO": "NOME"
+        "MATCH_CAMPO": "RF_PONTOS_VINCULO"
     }
 ]
