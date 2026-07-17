@@ -21,20 +21,20 @@
       </nav>
 
       <div class="content">
-          <!-- Aba Resultados -->
-          <div class="tabPane" id="tab-matches">
-              <h2>Resultados Encontrados</h2>
-              <div style="display: flex; gap: 40px;">
-                  <div style="flex: 1;">
-                      <h3>CEI</h3>
-                      <div id="tableMatchesCEI" class="table"></div>
-                  </div>
-                  <div style="flex: 1;">
-                      <h3>EMEI</h3>
-                      <div id="tableMatchesEMEI" class="table"></div>
-                  </div>
-              </div>
+        <!-- Aba Resultados -->
+        <div class="tabPane" id="tab-matches">
+          <h2>Resultados Encontrados</h2>
+          <div class="matches-container">
+            <div class="match-box">
+              <h3>CEI</h3>
+              <div id="tableMatchesCEI" class="table"></div>
+            </div>
+            <div class="match-box">
+              <h3>EMEI</h3>
+              <div id="tableMatchesEMEI" class="table"></div>
+            </div>
           </div>
+        </div>
 
         <!-- Aba Execuções -->
         <div class="tabPane hidden" id="tab-runs">
@@ -45,15 +45,12 @@
         <!-- Aba Pessoas -->
         <div class="tabPane hidden" id="tab-people">
           <h2>Base de Pessoas</h2>
-          <div class="toolbar" style="display: flex; gap: 10px;">
-            <input id="peopleFilter" class="input" placeholder="Filtrar por nome ou RF..." style="flex: 1;" />
+          <div class="toolbar">
+            <input id="peopleFilter" class="input" placeholder="Filtrar por nome ou RF..." />
           </div>
           <div id="tablePeople" class="table"></div>
         </div>
-          <!-- Barra de filtros removida -->
-          <div id="tablePeople" class="table"></div>
-        </div>
-      </div> <!-- Fecha a div content -->
+      </div>
     </main>
 
     <script src="./app.js"></script>

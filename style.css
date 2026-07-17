@@ -106,3 +106,27 @@ h2 { margin: 0 0 12px; font-size: 18px; font-weight: 650; }
     padding-bottom: 2px;
     font-weight: 600;
 }
+
+/* Torna as tabelas responsivas */
+@media (max-width: 600px) {
+  /* Altera o layout do grid para empilhar se necessário */
+  .table .row {
+    grid-template-columns: 1fr !important; /* Em mobile, vira uma coluna só */
+    gap: 4px;
+    padding: 12px;
+  }
+  
+  /* Esconde o cabeçalho no mobile, pois ocupa muito espaço */
+  .table .row.head { display: none; }
+  
+  /* Ajusta o espaçamento das abas */
+  #tab-matches > div {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+}
+
+/* Garante que o container da tabela tenha scroll se o conteúdo for largo */
+.table {
+  overflow-x: auto;
+}
