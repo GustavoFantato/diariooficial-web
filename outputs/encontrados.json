@@ -1,31 +1,31 @@
 [
     {
-        "NOME": "FRANCISCA DAS CHAGAS SILVA",
+        "NOME": "SIMONE CONCEICAO SANTOS",
         "UNIDADE": "EMEI",
-        "RF": "9494693",
-        "RF_VINCULO": "9494693/1",
-        "RF_PONTOS_VINCULO": "949.469.3/1",
-        "RF_COM_PONTOS": "949.469.3",
+        "RF": "7318332",
+        "RF_VINCULO": "7318332/1",
+        "RF_PONTOS_VINCULO": "731.833.2/1",
+        "RF_COM_PONTOS": "731.833.2",
         "TIPO": "EMEI",
-        "MATCH_CAMPO": "NOME"
+        "MATCH_CAMPO": "RF_COM_PONTOS"
     },
     {
-        "NOME": "ELAINE CRISTINA FERREIRA",
+        "NOME": "THAINA SOARES GOVEIA",
         "UNIDADE": "CEI",
-        "RF": "8877823",
-        "RF_VINCULO": "8877823/1",
-        "RF_PONTOS_VINCULO": "887.782.3/1",
-        "RF_COM_PONTOS": "887.782.3",
+        "RF": "9279121",
+        "RF_VINCULO": "9279121/1",
+        "RF_PONTOS_VINCULO": "927.912.1/1",
+        "RF_COM_PONTOS": "927.912.1",
         "TIPO": "CEI",
         "MATCH_CAMPO": "NOME"
     },
     {
-        "NOME": "JULIANA DA SILVA NERIS",
+        "NOME": "THAINÁ SOARES GOVEIA",
         "UNIDADE": "CEI",
-        "RF": "9183361",
-        "RF_VINCULO": "9183361/1",
-        "RF_PONTOS_VINCULO": "918.336.1/1",
-        "RF_COM_PONTOS": "918.336.1",
+        "RF": "9279121",
+        "RF_VINCULO": "9279121/1",
+        "RF_PONTOS_VINCULO": "927.912.1/1",
+        "RF_COM_PONTOS": "927.912.1",
         "TIPO": "CEI",
         "MATCH_CAMPO": "NOME"
     }
