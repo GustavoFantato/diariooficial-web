@@ -1,31 +1,21 @@
 [
     {
-        "NOME": "SIMONE CONCEICAO SANTOS",
+        "NOME": "SILVIA FANTATO FERNANDES",
         "UNIDADE": "EMEI",
-        "RF": "7318332",
-        "RF_VINCULO": "7318332/1",
-        "RF_PONTOS_VINCULO": "731.833.2/1",
-        "RF_COM_PONTOS": "731.833.2",
+        "RF": "7277253",
+        "RF_VINCULO": "7277253/3",
+        "RF_PONTOS_VINCULO": "727.725.3/3",
+        "RF_COM_PONTOS": "727.725.3",
         "TIPO": "EMEI",
-        "MATCH_CAMPO": "RF_COM_PONTOS"
-    },
-    {
-        "NOME": "THAINA SOARES GOVEIA",
-        "UNIDADE": "CEI",
-        "RF": "9279121",
-        "RF_VINCULO": "9279121/1",
-        "RF_PONTOS_VINCULO": "927.912.1/1",
-        "RF_COM_PONTOS": "927.912.1",
-        "TIPO": "CEI",
         "MATCH_CAMPO": "NOME"
     },
     {
-        "NOME": "THAINÁ SOARES GOVEIA",
+        "NOME": "SILVIA FANTATO FERNANDES",
         "UNIDADE": "CEI",
-        "RF": "9279121",
-        "RF_VINCULO": "9279121/1",
-        "RF_PONTOS_VINCULO": "927.912.1/1",
-        "RF_COM_PONTOS": "927.912.1",
+        "RF": "7277253",
+        "RF_VINCULO": "7277253/2",
+        "RF_PONTOS_VINCULO": "727.725.3/2",
+        "RF_COM_PONTOS": "727.725.3",
         "TIPO": "CEI",
         "MATCH_CAMPO": "NOME"
     }
