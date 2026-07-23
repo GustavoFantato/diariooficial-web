@@ -1,6 +1,7 @@
 [
     {
         "NOME": "SILVIA FANTATO FERNANDES",
+        "NOME": "SILVIA FANTATO FERNANDES",
         "UNIDADE": "EMEI",
         "RF": "7277253",
         "RF_VINCULO": "7277253/3",
@@ -12,6 +13,7 @@
     },
     {
         "NOME": "SILVIA FANTATO FERNANDES",
+        "NOME": "SILVIA FANTATO FERNANDES",
         "UNIDADE": "CEI",
         "RF": "7277253",
         "RF_VINCULO": "7277253/2",
@@ -19,6 +21,7 @@
         "RF_COM_PONTOS": "727.725.3",
         "RF_HIFEN_VINCULO": "",
         "TIPO": "CEI",
+        "MATCH_CAMPO": "NOME"
         "MATCH_CAMPO": "NOME"
     }
 ]
