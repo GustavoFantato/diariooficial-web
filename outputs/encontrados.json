@@ -8,7 +8,8 @@
         "RF_COM_PONTOS": "727.725.3",
         "RF_HIFEN_VINCULO": "727.725-3/3",
         "TIPO": "EMEI",
-        "MATCH_CAMPO": "NOME"
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "SILVIA FANTATO FERNANDES"
     },
     {
         "NOME": "SILVIA FANTATO FERNANDES",
@@ -19,6 +20,7 @@
         "RF_COM_PONTOS": "727.725.3",
         "RF_HIFEN_VINCULO": "",
         "TIPO": "CEI",
-        "MATCH_CAMPO": "NOME"
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "SILVIA FANTATO FERNANDES"
     }
 ]
