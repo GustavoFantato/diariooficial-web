@@ -23,7 +23,8 @@ async function carregarDadosCSV() {
                 rf_vinculo: colunas[3]?.trim() || '',
                 rf_pontos_vinculo: colunas[4]?.trim() || '',
                 rf_com_pontos: colunas[5]?.trim() || '',
-                rf_hifen_vinculo: colunas[6]?.trim() || ''
+                rf_hifen_vinculo: colunas[6]?.trim() || '',
+                rf_hifen: colunas[7]?.trim() || ''
             };
         });
         renderTabelaPessoas(listaOriginal);
@@ -59,12 +60,12 @@ async function carregarEncontrados() {
         const cei = data.filter(item => String(item.TIPO).toUpperCase().includes('CEI'));
         const emei = data.filter(item => String(item.TIPO).toUpperCase().includes('EMEI'));
 
-        // Adicionada uma coluna a mais no grid (6 colunas agora)
-        const gridConfig = window.innerWidth < 600 ? "1fr" : "2.2fr 0.8fr 0.9fr 1fr 0.9fr 1fr";
+        // Configuração do grid para 7 colunas agora
+        const gridConfig = window.innerWidth < 600 ? "1fr" : "2fr 0.7fr 0.8fr 0.9fr 0.8fr 0.9fr 0.9fr";
 
         const gerarHTML = (lista) => lista.length > 0 ? `
             <div class="row head" style="grid-template-columns: ${gridConfig};">
-                <div>Nome</div><div>RF</div><div>RF Vínc.</div><div>RF P. Vínc.</div><div>RF Pontos</div><div>RF Hífen Vínc.</div>
+                <div>Nome</div><div>RF</div><div>RF Vínc.</div><div>RF P. Vínc.</div><div>RF Pontos</div><div>RF Hífen Vínc.</div><div>RF Hífen</div>
             </div>
             ${lista.map(item => `
                 <div class="row" style="grid-template-columns: ${gridConfig};">
@@ -74,6 +75,7 @@ async function carregarEncontrados() {
                     <div class="mono ${item.MATCH_CAMPO === 'RF_PONTOS_VINCULO' ? 'highlight-match' : ''}">${item.RF_PONTOS_VINCULO || '-'}</div>
                     <div class="mono ${item.MATCH_CAMPO === 'RF_COM_PONTOS' ? 'highlight-match' : ''}">${item.RF_COM_PONTOS || '-'}</div>
                     <div class="mono ${item.MATCH_CAMPO === 'RF_HIFEN_VINCULO' ? 'highlight-match' : ''}">${item.RF_HIFEN_VINCULO || '-'}</div>
+                    <div class="mono ${item.MATCH_CAMPO === 'RF_HIFEN' ? 'highlight-match' : ''}">${item.RF_HIFEN || '-'}</div>
                 </div>
             `).join('')}
         ` : `<div style="padding:10px;">Nenhum registro encontrado nesta categoria.</div>`;
@@ -114,7 +116,8 @@ function aplicarFiltros() {
                p.rf_vinculo.toLowerCase().includes(termo) ||
                p.rf_pontos_vinculo.toLowerCase().includes(termo) ||
                p.rf_com_pontos.includes(termo) ||
-               p.rf_hifen_vinculo.toLowerCase().includes(termo);
+               p.rf_hifen_vinculo.toLowerCase().includes(termo) ||
+               p.rf_hifen.toLowerCase().includes(termo);
     });
     renderTabelaPessoas(listaFiltrada);
 }
