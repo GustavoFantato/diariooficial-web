@@ -37,6 +37,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y poppler-utils
 
+      - name: Criar arquivo de credenciais do Google
+        run: |
+          mkdir -p backend
+          echo '${{ secrets.GCP_CREDENTIALS }}' > backend/credentials.json
+
       - name: Rodar scripts
         run: |
           python backend/run.py
