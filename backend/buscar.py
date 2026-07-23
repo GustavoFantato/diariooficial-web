@@ -24,7 +24,12 @@ try:
     response.raise_for_status()
     lista_pessoas = pd.read_csv(StringIO(response.text))
     
-    lista_pessoas.columns = ['nome', 'unidade', 'rf', 'rf_vinculo', 'rf_pontos_vinculo', 'rf_com_pontos', 'rf_hifen_vinculo']
+    # Atualizado para incluir a nova coluna 'rf_hifen' (esperada na 8ª coluna da planilha)
+    lista_pessoas.columns = [
+        'nome', 'unidade', 'rf', 'rf_vinculo', 
+        'rf_pontos_vinculo', 'rf_com_pontos', 
+        'rf_hifen_vinculo', 'rf_hifen'
+    ]
     
     with open(DIARIO_PATH, 'r', encoding='utf-8') as f:
         diario = normalize_text(f.read())
@@ -41,6 +46,7 @@ for _, row in lista_pessoas.iterrows():
     rf_pontos_vinc = str(row['rf_pontos_vinculo']) if pd.notna(row['rf_pontos_vinculo']) else ""
     rf_com_pontos = str(row['rf_com_pontos']) if pd.notna(row['rf_com_pontos']) else ""
     rf_hifen_vinc = str(row['rf_hifen_vinculo']) if pd.notna(row['rf_hifen_vinculo']) else ""
+    rf_hifen = str(row['rf_hifen']) if pd.notna(row['rf_hifen']) else ""
     unidade = str(row['unidade']) if pd.notna(row['unidade']) else ""
     
     categoria = "CEI" if "CEI" in unidade.upper() else ("EMEI" if "EMEI" in unidade.upper() else "OUTROS")
@@ -51,7 +57,8 @@ for _, row in lista_pessoas.iterrows():
         'RF_VINCULO': [rf_vinc],
         'RF_PONTOS_VINCULO': [rf_pontos_vinc],
         'RF_COM_PONTOS': [rf_com_pontos],
-        'RF_HIFEN_VINCULO': [rf_hifen_vinc]
+        'RF_HIFEN_VINCULO': [rf_hifen_vinc],
+        'RF_HIFEN': [rf_hifen]
     }
     
     match_campo = None
@@ -72,6 +79,7 @@ for _, row in lista_pessoas.iterrows():
             'RF_PONTOS_VINCULO': rf_pontos_vinc, 
             'RF_COM_PONTOS': rf_com_pontos,
             'RF_HIFEN_VINCULO': rf_hifen_vinc,
+            'RF_HIFEN': rf_hifen,
             'TIPO': categoria, 
             'MATCH_CAMPO': match_campo,
             'VALOR_MATCH': valor_match
@@ -95,11 +103,8 @@ def salvar_no_historico(encontrados_lista):
         creds = Credentials.from_service_account_file(creds_path, scopes=scopes)
         client = gspread.authorize(creds)
         
-        # Abre a planilha pelo link direto fornecido
         planilha_url = "https://docs.google.com/spreadsheets/d/1k3i1Wm5nypzaA4aBTckffsNxw0kJW70rSmqViNVRkDM/edit?gid=567498651#gid=567498651"
         planilha = client.open_by_url(planilha_url)
-        
-        # Seleciona a aba "Historico"
         sheet = planilha.worksheet("Historico")
         
         data_atual = datetime.now().strftime("%d/%m/%Y")
@@ -111,7 +116,6 @@ def salvar_no_historico(encontrados_lista):
             unidade_pessoa = item['UNIDADE']
             criterio_valor = item['VALOR_MATCH']
             
-            # Verifica se já foi salvo hoje para evitar duplicatas na mesma manhã
             ja_salvo = any(
                 str(r.get('Data')) == data_atual and 
                 str(r.get('Nome')) == nome_pessoa and 
@@ -131,5 +135,4 @@ def salvar_no_historico(encontrados_lista):
     except Exception as e:
         print(f"Erro ao atualizar histórico no Google Sheets: {e}")
 
-# Executa o salvamento do histórico
 salvar_no_historico(encontrados)
