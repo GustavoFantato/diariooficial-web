@@ -40,14 +40,14 @@ except Exception as e:
 encontrados = []
 
 for _, row in lista_pessoas.iterrows():
-    nome = str(row['nome']) if pd.notna(row['nome']) else ""
-    rf = str(row['rf']) if pd.notna(row['rf']) else ""
-    rf_vinc = str(row['rf_vinculo']) if pd.notna(row['rf_vinculo']) else ""
-    rf_pontos_vinc = str(row['rf_pontos_vinculo']) if pd.notna(row['rf_pontos_vinculo']) else ""
-    rf_com_pontos = str(row['rf_com_pontos']) if pd.notna(row['rf_com_pontos']) else ""
-    rf_hifen_vinc = str(row['rf_hifen_vinculo']) if pd.notna(row['rf_hifen_vinculo']) else ""
-    rf_hifen = str(row['rf_hifen']) if pd.notna(row['rf_hifen']) else ""
-    unidade = str(row['unidade']) if pd.notna(row['unidade']) else ""
+    nome = str(row.iloc[0]) if pd.notna(row.iloc[0]) else ""
+    unidade = str(row.iloc[1]) if pd.notna(row.iloc[1]) else ""
+    rf = str(row.iloc[2]) if pd.notna(row.iloc[2]) else ""
+    rf_vinc = str(row.iloc[3]) if pd.notna(row.iloc[3]) else ""
+    rf_pontos_vinc = str(row.iloc[4]) if pd.notna(row.iloc[4]) else ""
+    rf_com_pontos = str(row.iloc[5]) if pd.notna(row.iloc[5]) else ""
+    rf_hifen_vinc = str(row.iloc[6]) if pd.notna(row.iloc[6]) else ""
+    rf_hifen = str(row.iloc[7]) if pd.notna(row.iloc[7]) else ""
     
     categoria = "CEI" if "CEI" in unidade.upper() else ("EMEI" if "EMEI" in unidade.upper() else "OUTROS")
     
