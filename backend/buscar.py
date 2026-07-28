@@ -24,7 +24,6 @@ try:
     response.raise_for_status()
     lista_pessoas = pd.read_csv(StringIO(response.text))
     
-    # Atualizado para incluir a nova coluna 'rf_hifen' (esperada na 8ª coluna da planilha)
     lista_pessoas.columns = [
         'nome', 'unidade', 'rf', 'rf_vinculo', 
         'rf_pontos_vinculo', 'rf_com_pontos', 
@@ -116,10 +115,11 @@ def salvar_no_historico(encontrados_lista):
             unidade_pessoa = item['UNIDADE']
             criterio_valor = item['VALOR_MATCH']
             
+            # CORREÇÃO: Agora valida obrigatoriamente se JÁ EXISTE REGISTRO HOJE para essa pessoa e unidade
             ja_salvo = any(
-                str(r.get('Data')) == data_atual and 
-                str(r.get('Nome')) == nome_pessoa and 
-                str(r.get('Unidade')) == unidade_pessoa 
+                str(r.get('Data')).strip() == data_atual and 
+                str(r.get('Nome')).strip() == nome_pessoa and 
+                str(r.get('Unidade')).strip() == unidade_pessoa 
                 for r in registros_existentes
             )
             
