@@ -1,54 +1,28 @@
 [
     {
-        "NOME": "JULIO CESAR PEREIRA",
+        "NOME": "GERALDO SOARES DA SILVA",
         "UNIDADE": "EMEI",
-        "RF": "7750722",
-        "RF_VINCULO": "7750722/1",
-        "RF_PONTOS_VINCULO": "775.072.2/1",
-        "RF_COM_PONTOS": "775.072.2",
-        "RF_HIFEN_VINCULO": "775.072-2/1",
-        "RF_HIFEN": "775.072-2",
+        "RF": "8837091",
+        "RF_VINCULO": "8837091/3",
+        "RF_PONTOS_VINCULO": "883.709.1/3",
+        "RF_COM_PONTOS": "883.709.1",
+        "RF_HIFEN_VINCULO": "883.709-1/3",
+        "RF_HIFEN": "883.709-1",
         "TIPO": "EMEI",
         "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "JULIO CESAR PEREIRA"
+        "VALOR_MATCH": "GERALDO SOARES DA SILVA"
     },
     {
-        "NOME": "JÚLIO CESAR PEREIRA",
-        "UNIDADE": "EMEI",
-        "RF": "7750722",
-        "RF_VINCULO": "7750722/1",
-        "RF_PONTOS_VINCULO": "775.072.2/1",
-        "RF_COM_PONTOS": "775.072.2",
-        "RF_HIFEN_VINCULO": "775.072-2/1",
-        "RF_HIFEN": "775.072-2",
-        "TIPO": "EMEI",
-        "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "JULIO CESAR PEREIRA"
-    },
-    {
-        "NOME": "INES ARICETO MAYEDA",
+        "NOME": "VALQUIRIA ALMEIDA ROCHA GARCIA",
         "UNIDADE": "CEI",
-        "RF": "7451237",
-        "RF_VINCULO": "7451237/1",
-        "RF_PONTOS_VINCULO": "745.123.7/1",
-        "RF_COM_PONTOS": "745.123.7",
-        "RF_HIFEN_VINCULO": "745.123-7/1",
-        "RF_HIFEN": "745.123-7",
+        "RF": "8572364",
+        "RF_VINCULO": "8572364/3",
+        "RF_PONTOS_VINCULO": "857.236.4/3",
+        "RF_COM_PONTOS": "857.236.4",
+        "RF_HIFEN_VINCULO": "857.236-4/3",
+        "RF_HIFEN": "857.236-4",
         "TIPO": "CEI",
-        "MATCH_CAMPO": "RF_PONTOS_VINCULO",
-        "VALOR_MATCH": "745.123.7/1"
-    },
-    {
-        "NOME": "INÊS ARICETO MAYEDA",
-        "UNIDADE": "CEI",
-        "RF": "7451237",
-        "RF_VINCULO": "7451237/1",
-        "RF_PONTOS_VINCULO": "745.123.7/1",
-        "RF_COM_PONTOS": "745.123.7",
-        "RF_HIFEN_VINCULO": "745.123-7/1",
-        "RF_HIFEN": "745.123-7",
-        "TIPO": "CEI",
-        "MATCH_CAMPO": "RF_PONTOS_VINCULO",
-        "VALOR_MATCH": "745.123.7/1"
+        "MATCH_CAMPO": "RF",
+        "VALOR_MATCH": "8572364"
     }
 ]
