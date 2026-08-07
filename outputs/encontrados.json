@@ -1,8 +1,21 @@
 [
     {
+        "NOME": "PTRF",
+        "UNIDADE": "EMEI/CEI",
+        "RF": "",
+        "RF_VINCULO": "",
+        "RF_PONTOS_VINCULO": "",
+        "RF_COM_PONTOS": "",
+        "RF_HIFEN_VINCULO": "",
+        "RF_HIFEN": "",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "PTRF"
+    },
+    {
         "NOME": "ENEIDA CRISTINA DE FARIA LARIO",
         "UNIDADE": "EMEI",
-        "RF": "7707703",
+        "RF": "7707703.0",
         "RF_VINCULO": "7707703/1",
         "RF_PONTOS_VINCULO": "770.770.3/1",
         "RF_COM_PONTOS": "770.770.3",
@@ -15,20 +28,20 @@
     {
         "NOME": "FERNANDA PEREIRA ALEIXO DE CAMPOS SILVA",
         "UNIDADE": "EMEI",
-        "RF": "8283001",
+        "RF": "8283001.0",
         "RF_VINCULO": "8283001/1",
         "RF_PONTOS_VINCULO": "828.300.1/1",
         "RF_COM_PONTOS": "828.300.1",
         "RF_HIFEN_VINCULO": "828.300-1/1",
         "RF_HIFEN": "828.300-1",
         "TIPO": "EMEI",
-        "MATCH_CAMPO": "RF",
-        "VALOR_MATCH": "8283001"
+        "MATCH_CAMPO": "RF_VINCULO",
+        "VALOR_MATCH": "8283001/1"
     },
     {
         "NOME": "MATEUS FELIPE RODRIGUES MELO",
         "UNIDADE": "EMEI",
-        "RF": "9460560",
+        "RF": "9460560.0",
         "RF_VINCULO": "9460560/1",
         "RF_PONTOS_VINCULO": "946.056.0/1",
         "RF_COM_PONTOS": "946.056.0",
@@ -41,7 +54,7 @@
     {
         "NOME": "RAPHAEL OLIVEIRA CESARIO",
         "UNIDADE": "EMEI",
-        "RF": "7822031",
+        "RF": "7822031.0",
         "RF_VINCULO": "7822031/2",
         "RF_PONTOS_VINCULO": "782.203.1/2",
         "RF_COM_PONTOS": "782.203.1",
@@ -54,7 +67,7 @@
     {
         "NOME": "AMANDA SALES MIRANDA LACERDA",
         "UNIDADE": "CEI",
-        "RF": "8853100",
+        "RF": "8853100.0",
         "RF_VINCULO": "8853100/2",
         "RF_PONTOS_VINCULO": "885.310.0/2",
         "RF_COM_PONTOS": "885.310.0",
