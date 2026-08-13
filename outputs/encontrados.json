@@ -24,44 +24,5 @@
         "TIPO": "CEI",
         "MATCH_CAMPO": "NOME",
         "VALOR_MATCH": "PTRF"
-    },
-    {
-        "NOME": "JULIO CESAR PEREIRA",
-        "UNIDADE": "EMEI",
-        "RF": "7750722.0",
-        "RF_VINCULO": "7750722/1",
-        "RF_PONTOS_VINCULO": "775.072.2/1",
-        "RF_COM_PONTOS": "775.072.2",
-        "RF_HIFEN_VINCULO": "775.072-2/1",
-        "RF_HIFEN": "775.072-2",
-        "TIPO": "EMEI",
-        "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "JULIO CESAR PEREIRA"
-    },
-    {
-        "NOME": "JÚLIO CESAR PEREIRA",
-        "UNIDADE": "EMEI",
-        "RF": "7750722.0",
-        "RF_VINCULO": "7750722/1",
-        "RF_PONTOS_VINCULO": "775.072.2/1",
-        "RF_COM_PONTOS": "775.072.2",
-        "RF_HIFEN_VINCULO": "775.072-2/1",
-        "RF_HIFEN": "775.072-2",
-        "TIPO": "EMEI",
-        "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "JULIO CESAR PEREIRA"
-    },
-    {
-        "NOME": "ANA HELENA ZAMARIAN DE SIQUEIRA",
-        "UNIDADE": "CEI",
-        "RF": "9343202.0",
-        "RF_VINCULO": "9343202/2",
-        "RF_PONTOS_VINCULO": "934.320.2/2",
-        "RF_COM_PONTOS": "934.320.2",
-        "RF_HIFEN_VINCULO": "934.320-2/2",
-        "RF_HIFEN": "934.320-2",
-        "TIPO": "CEI",
-        "MATCH_CAMPO": "RF_VINCULO",
-        "VALOR_MATCH": "9343202/2"
     }
 ]
