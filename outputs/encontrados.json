@@ -1,16 +1,29 @@
 [
     {
-        "NOME": "ENEIDA CRISTINA DE FARIA LARIO",
+        "NOME": "ROBERTA BRUNELLI",
         "UNIDADE": "EMEI",
-        "RF": "7707703.0",
-        "RF_VINCULO": "7707703/1",
-        "RF_PONTOS_VINCULO": "770.770.3/1",
-        "RF_COM_PONTOS": "770.770.3",
-        "RF_HIFEN_VINCULO": "770.770-3/1",
-        "RF_HIFEN": "770.770-3",
+        "RF": "7247192.0",
+        "RF_VINCULO": "7247192/1",
+        "RF_PONTOS_VINCULO": "724.719.2/1",
+        "RF_COM_PONTOS": "724.719.2",
+        "RF_HIFEN_VINCULO": "724.719-2/1",
+        "RF_HIFEN": "724.719-2",
         "TIPO": "EMEI",
         "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "ENEIDA CRISTINA DE FARIA LARIO"
+        "VALOR_MATCH": "ROBERTA BRUNELLI"
+    },
+    {
+        "NOME": "ELAINE CRISTINA FERREIRA",
+        "UNIDADE": "CEI",
+        "RF": "8877823.0",
+        "RF_VINCULO": "8877823/1",
+        "RF_PONTOS_VINCULO": "887.782.3/1",
+        "RF_COM_PONTOS": "887.782.3",
+        "RF_HIFEN_VINCULO": "887.782-3/1",
+        "RF_HIFEN": "887.782-3",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "ELAINE CRISTINA FERREIRA"
     },
     {
         "NOME": "IRAIDE SILVA RIBEIRO DOS SANTOS",
@@ -26,19 +39,6 @@
         "VALOR_MATCH": "IRAIDE SILVA RIBEIRO DOS SANTOS"
     },
     {
-        "NOME": "LARISSA ALEXANDRIA DOS SANTOS PEREIRA",
-        "UNIDADE": "EMEI",
-        "RF": "9573755.0",
-        "RF_VINCULO": "9573755/1",
-        "RF_PONTOS_VINCULO": "957.375.5/1",
-        "RF_COM_PONTOS": "957.375.5",
-        "RF_HIFEN_VINCULO": "957.375-5/1",
-        "RF_HIFEN": "957.375-5",
-        "TIPO": "EMEI",
-        "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "LARISSA ALEXANDRIA DOS SANTOS PEREIRA"
-    },
-    {
         "NOME": "ELENICE LUDUVINA DA SILVA SANTOS",
         "UNIDADE": "EMEI",
         "RF": "9543384.0",
@@ -48,7 +48,33 @@
         "RF_HIFEN_VINCULO": "954.338-4/1",
         "RF_HIFEN": "954.338-4",
         "TIPO": "EMEI",
-        "MATCH_CAMPO": "RF_PONTOS_VINCULO",
-        "VALOR_MATCH": "954.338.4/1"
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "ELENICE LUDUVINA DA SILVA SANTOS"
+    },
+    {
+        "NOME": "GLÓRIA AGOSTINHO DE SOUSA",
+        "UNIDADE": "EMEI",
+        "RF": "9246185.0",
+        "RF_VINCULO": "9246185/1",
+        "RF_PONTOS_VINCULO": "924.618.5/1",
+        "RF_COM_PONTOS": "924.618.5",
+        "RF_HIFEN_VINCULO": "924.618-5/1",
+        "RF_HIFEN": "924.618-5",
+        "TIPO": "EMEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "GLORIA AGOSTINHO DE SOUSA"
+    },
+    {
+        "NOME": "GLORIA AGOSTINHO DE SOUSA",
+        "UNIDADE": "EMEI",
+        "RF": "9246185.0",
+        "RF_VINCULO": "9246185/1",
+        "RF_PONTOS_VINCULO": "924.618.5/1",
+        "RF_COM_PONTOS": "924.618.5",
+        "RF_HIFEN_VINCULO": "924.618-5/1",
+        "RF_HIFEN": "924.618-5",
+        "TIPO": "EMEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "GLORIA AGOSTINHO DE SOUSA"
     }
 ]
