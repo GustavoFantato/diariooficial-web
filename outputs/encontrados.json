@@ -1,42 +1,16 @@
 [
     {
-        "NOME": "JANAINA BARBOSA MONTES FONTANA",
-        "UNIDADE": "EMEI",
-        "RF": "8214271.0",
-        "RF_VINCULO": "8214271/1",
-        "RF_PONTOS_VINCULO": "821.427.1/1",
-        "RF_COM_PONTOS": "821.427.1",
-        "RF_HIFEN_VINCULO": "821.427-1/1",
-        "RF_HIFEN": "821.427-1",
-        "TIPO": "EMEI",
-        "MATCH_CAMPO": "RF_VINCULO",
-        "VALOR_MATCH": "8214271/1"
-    },
-    {
-        "NOME": "JANAÍNA BARBOSA MONTES FONTANA",
-        "UNIDADE": "EMEI",
-        "RF": "8214271.0",
-        "RF_VINCULO": "8214271/1",
-        "RF_PONTOS_VINCULO": "821.427.1/1",
-        "RF_COM_PONTOS": "821.427.1",
-        "RF_HIFEN_VINCULO": "821.427-1/1",
-        "RF_HIFEN": "821.427-1",
-        "TIPO": "EMEI",
-        "MATCH_CAMPO": "RF_VINCULO",
-        "VALOR_MATCH": "8214271/1"
-    },
-    {
-        "NOME": "VIVIANE NASCIMENTO DE ALMEIDA",
-        "UNIDADE": "EMEI",
-        "RF": "7820925.0",
-        "RF_VINCULO": "7820925/2",
-        "RF_PONTOS_VINCULO": "782.092.5/2",
-        "RF_COM_PONTOS": "782.092.5",
-        "RF_HIFEN_VINCULO": "782.092-5/2",
-        "RF_HIFEN": "782.092-5",
-        "TIPO": "EMEI",
-        "MATCH_CAMPO": "RF_PONTOS_VINCULO",
-        "VALOR_MATCH": "782.092.5/2"
+        "NOME": "PTRF",
+        "UNIDADE": "EMEI/CEI",
+        "RF": "",
+        "RF_VINCULO": "",
+        "RF_PONTOS_VINCULO": "",
+        "RF_COM_PONTOS": "",
+        "RF_HIFEN_VINCULO": "",
+        "RF_HIFEN": "",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "PTRF"
     },
     {
         "NOME": "AMANDA SALES MIRANDA LACERDA",
@@ -52,16 +26,16 @@
         "VALOR_MATCH": "AMANDA SALES MIRANDA LACERDA"
     },
     {
-        "NOME": "VIVIANE NASCIMENTO DE ALMEIDA",
+        "NOME": "MARINA ZANGARI SANTANA",
         "UNIDADE": "CEI",
-        "RF": "7820925.0",
-        "RF_VINCULO": "7820925/3",
-        "RF_PONTOS_VINCULO": "782.092.5/3",
-        "RF_COM_PONTOS": "782.092.5",
-        "RF_HIFEN_VINCULO": "782.092-5/3",
-        "RF_HIFEN": "782.092-5",
+        "RF": "7495811.0",
+        "RF_VINCULO": "7495811/1",
+        "RF_PONTOS_VINCULO": "749.581.1/1",
+        "RF_COM_PONTOS": "749.581.1",
+        "RF_HIFEN_VINCULO": "749.581-1/1",
+        "RF_HIFEN": "749.581-1",
         "TIPO": "CEI",
-        "MATCH_CAMPO": "RF_COM_PONTOS",
-        "VALOR_MATCH": "782.092.5"
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "MARINA ZANGARI SANTANA"
     }
 ]
