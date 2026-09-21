@@ -1,5 +1,96 @@
 [
     {
+        "NOME": "GERALDO SOARES DA SILVA",
+        "UNIDADE": "EMEI",
+        "RF": "8837091.0",
+        "RF_VINCULO": "8837091/3",
+        "RF_PONTOS_VINCULO": "883.709.1/3",
+        "RF_COM_PONTOS": "883.709.1",
+        "RF_HIFEN_VINCULO": "883.709-1/3",
+        "RF_HIFEN": "883.709-1",
+        "TIPO": "EMEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "GERALDO SOARES DA SILVA"
+    },
+    {
+        "NOME": "AMANDA SALES MIRANDA LACERDA",
+        "UNIDADE": "CEI",
+        "RF": "8853100.0",
+        "RF_VINCULO": "8853100/2",
+        "RF_PONTOS_VINCULO": "885.310.0/2",
+        "RF_COM_PONTOS": "885.310.0",
+        "RF_HIFEN_VINCULO": "885.310-0/2",
+        "RF_HIFEN": "885.310-0",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "AMANDA SALES MIRANDA LACERDA"
+    },
+    {
+        "NOME": "INES ARICETO MAYEDA",
+        "UNIDADE": "CEI",
+        "RF": "7451237.0",
+        "RF_VINCULO": "7451237/1",
+        "RF_PONTOS_VINCULO": "745.123.7/1",
+        "RF_COM_PONTOS": "745.123.7",
+        "RF_HIFEN_VINCULO": "745.123-7/1",
+        "RF_HIFEN": "745.123-7",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "INES ARICETO MAYEDA"
+    },
+    {
+        "NOME": "INÊS ARICETO MAYEDA",
+        "UNIDADE": "CEI",
+        "RF": "7451237.0",
+        "RF_VINCULO": "7451237/1",
+        "RF_PONTOS_VINCULO": "745.123.7/1",
+        "RF_COM_PONTOS": "745.123.7",
+        "RF_HIFEN_VINCULO": "745.123-7/1",
+        "RF_HIFEN": "745.123-7",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "INES ARICETO MAYEDA"
+    },
+    {
+        "NOME": "LETICIA DIAS CERQUEIRA DOS SANTOS",
+        "UNIDADE": "CEI",
+        "RF": "9456767.0",
+        "RF_VINCULO": "9456767/1",
+        "RF_PONTOS_VINCULO": "945.676.7/1",
+        "RF_COM_PONTOS": "945.676.7",
+        "RF_HIFEN_VINCULO": "945.676-7/1",
+        "RF_HIFEN": "945.676-7",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "RF_VINCULO",
+        "VALOR_MATCH": "9456767/1"
+    },
+    {
+        "NOME": "LETÍCIA DIAS CERQUEIRA DOS SANTOS",
+        "UNIDADE": "CEI",
+        "RF": "9456767.0",
+        "RF_VINCULO": "9456767/1",
+        "RF_PONTOS_VINCULO": "945.676.7/1",
+        "RF_COM_PONTOS": "945.676.7",
+        "RF_HIFEN_VINCULO": "945.676-7/1",
+        "RF_HIFEN": "945.676-7",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "RF_VINCULO",
+        "VALOR_MATCH": "9456767/1"
+    },
+    {
+        "NOME": "RITA DE CASSIA VIEIRA DE OLIVEIRA",
+        "UNIDADE": "CEI",
+        "RF": "8244626.0",
+        "RF_VINCULO": "8244626/2",
+        "RF_PONTOS_VINCULO": "824.462.6/2",
+        "RF_COM_PONTOS": "824.462.6",
+        "RF_HIFEN_VINCULO": "824.462-6/2",
+        "RF_HIFEN": "824.462-6",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "RITA DE CASSIA VIEIRA DE OLIVEIRA"
+    },
+    {
         "NOME": "VALERIA DOS SANTOS SOARES",
         "UNIDADE": "CEI",
         "RF": "7454813.0",
@@ -24,5 +115,18 @@
         "TIPO": "CEI",
         "MATCH_CAMPO": "NOME",
         "VALOR_MATCH": "VALERIA DOS SANTOS SOARES"
+    },
+    {
+        "NOME": "VALQUIRIA ALMEIDA ROCHA GARCIA",
+        "UNIDADE": "CEI",
+        "RF": "8572364.0",
+        "RF_VINCULO": "8572364/3",
+        "RF_PONTOS_VINCULO": "857.236.4/3",
+        "RF_COM_PONTOS": "857.236.4",
+        "RF_HIFEN_VINCULO": "857.236-4/3",
+        "RF_HIFEN": "857.236-4",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "RF_VINCULO",
+        "VALOR_MATCH": "8572364/3"
     }
 ]
