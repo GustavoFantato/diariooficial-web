@@ -13,17 +13,17 @@
         "VALOR_MATCH": "GERALDO SOARES DA SILVA"
     },
     {
-        "NOME": "AMANDA SALES MIRANDA LACERDA",
-        "UNIDADE": "CEI",
-        "RF": "8853100.0",
-        "RF_VINCULO": "8853100/2",
-        "RF_PONTOS_VINCULO": "885.310.0/2",
-        "RF_COM_PONTOS": "885.310.0",
-        "RF_HIFEN_VINCULO": "885.310-0/2",
-        "RF_HIFEN": "885.310-0",
-        "TIPO": "CEI",
+        "NOME": "REIJANE SANTANA DA CONCEICAO",
+        "UNIDADE": "EMEI",
+        "RF": "9343491.0",
+        "RF_VINCULO": "9343491/1",
+        "RF_PONTOS_VINCULO": "934.349.1/1",
+        "RF_COM_PONTOS": "934.349.1",
+        "RF_HIFEN_VINCULO": "934.349-1/1",
+        "RF_HIFEN": "934.349-1",
+        "TIPO": "EMEI",
         "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "AMANDA SALES MIRANDA LACERDA"
+        "VALOR_MATCH": "REIJANE SANTANA DA CONCEICAO"
     },
     {
         "NOME": "INES ARICETO MAYEDA",
@@ -52,6 +52,32 @@
         "VALOR_MATCH": "INES ARICETO MAYEDA"
     },
     {
+        "NOME": "IRAIDE SILVA RIBEIRO DOS SANTOS",
+        "UNIDADE": "CEI",
+        "RF": "7326238.0",
+        "RF_VINCULO": "7326238/4",
+        "RF_PONTOS_VINCULO": "732.623.8/4",
+        "RF_COM_PONTOS": "732.623.8",
+        "RF_HIFEN_VINCULO": "732.623-8/4",
+        "RF_HIFEN": "732.623-8",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "RF_HIFEN_VINCULO",
+        "VALOR_MATCH": "732.623-8/4"
+    },
+    {
+        "NOME": "JULIANA DA SILVA NERIS",
+        "UNIDADE": "CEI",
+        "RF": "9183361.0",
+        "RF_VINCULO": "9183361/1",
+        "RF_PONTOS_VINCULO": "918.336.1/1",
+        "RF_COM_PONTOS": "918.336.1",
+        "RF_HIFEN_VINCULO": "918.336-1/1",
+        "RF_HIFEN": "918.336-1",
+        "TIPO": "CEI",
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "JULIANA DA SILVA NERIS"
+    },
+    {
         "NOME": "LETICIA DIAS CERQUEIRA DOS SANTOS",
         "UNIDADE": "CEI",
         "RF": "9456767.0",
@@ -61,8 +87,8 @@
         "RF_HIFEN_VINCULO": "945.676-7/1",
         "RF_HIFEN": "945.676-7",
         "TIPO": "CEI",
-        "MATCH_CAMPO": "RF_VINCULO",
-        "VALOR_MATCH": "9456767/1"
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "LETICIA DIAS CERQUEIRA DOS SANTOS"
     },
     {
         "NOME": "LETÍCIA DIAS CERQUEIRA DOS SANTOS",
@@ -74,47 +100,21 @@
         "RF_HIFEN_VINCULO": "945.676-7/1",
         "RF_HIFEN": "945.676-7",
         "TIPO": "CEI",
-        "MATCH_CAMPO": "RF_VINCULO",
-        "VALOR_MATCH": "9456767/1"
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "LETICIA DIAS CERQUEIRA DOS SANTOS"
     },
     {
-        "NOME": "RITA DE CASSIA VIEIRA DE OLIVEIRA",
+        "NOME": "MARGARETH YOSHIMI ITO",
         "UNIDADE": "CEI",
-        "RF": "8244626.0",
-        "RF_VINCULO": "8244626/2",
-        "RF_PONTOS_VINCULO": "824.462.6/2",
-        "RF_COM_PONTOS": "824.462.6",
-        "RF_HIFEN_VINCULO": "824.462-6/2",
-        "RF_HIFEN": "824.462-6",
+        "RF": "7443978.0",
+        "RF_VINCULO": "7443978/1",
+        "RF_PONTOS_VINCULO": "744.397.8/1",
+        "RF_COM_PONTOS": "744.397.8",
+        "RF_HIFEN_VINCULO": "744.397-8/1",
+        "RF_HIFEN": "744.397-8",
         "TIPO": "CEI",
         "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "RITA DE CASSIA VIEIRA DE OLIVEIRA"
-    },
-    {
-        "NOME": "VALERIA DOS SANTOS SOARES",
-        "UNIDADE": "CEI",
-        "RF": "7454813.0",
-        "RF_VINCULO": "7454813/1",
-        "RF_PONTOS_VINCULO": "745.481.3/1",
-        "RF_COM_PONTOS": "745.481.3",
-        "RF_HIFEN_VINCULO": "745.481-3/1",
-        "RF_HIFEN": "745.481-3",
-        "TIPO": "CEI",
-        "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "VALERIA DOS SANTOS SOARES"
-    },
-    {
-        "NOME": "VALÉRIA DOS SANTOS SOARES",
-        "UNIDADE": "CEI",
-        "RF": "7454813.0",
-        "RF_VINCULO": "7454813/1",
-        "RF_PONTOS_VINCULO": "745.481.3/1",
-        "RF_COM_PONTOS": "745.481.3",
-        "RF_HIFEN_VINCULO": "745.481-3/1",
-        "RF_HIFEN": "745.481-3",
-        "TIPO": "CEI",
-        "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "VALERIA DOS SANTOS SOARES"
+        "VALOR_MATCH": "MARGARETH YOSHIMI ITO"
     },
     {
         "NOME": "VALQUIRIA ALMEIDA ROCHA GARCIA",
@@ -126,7 +126,7 @@
         "RF_HIFEN_VINCULO": "857.236-4/3",
         "RF_HIFEN": "857.236-4",
         "TIPO": "CEI",
-        "MATCH_CAMPO": "RF_VINCULO",
-        "VALOR_MATCH": "8572364/3"
+        "MATCH_CAMPO": "NOME",
+        "VALOR_MATCH": "VALQUIRIA ALMEIDA ROCHA GARCIA"
     }
 ]
