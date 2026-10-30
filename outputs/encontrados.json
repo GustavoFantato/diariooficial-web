@@ -1,67 +1,28 @@
 [
     {
-        "NOME": "PTRF",
-        "UNIDADE": "EMEI/CEI",
-        "RF": "",
-        "RF_VINCULO": "",
-        "RF_PONTOS_VINCULO": "",
-        "RF_COM_PONTOS": "",
-        "RF_HIFEN_VINCULO": "",
-        "RF_HIFEN": "",
-        "TIPO": "CEI",
-        "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "PTRF"
-    },
-    {
-        "NOME": "GERALDO SOARES DA SILVA",
+        "NOME": "SILVIA FANTATO FERNANDES",
         "UNIDADE": "EMEI",
-        "RF": "8837091.0",
-        "RF_VINCULO": "8837091/3",
-        "RF_PONTOS_VINCULO": "883.709.1/3",
-        "RF_COM_PONTOS": "883.709.1",
-        "RF_HIFEN_VINCULO": "883.709-1/3",
-        "RF_HIFEN": "883.709-1",
+        "RF": "7277253.0",
+        "RF_VINCULO": "7277253/3",
+        "RF_PONTOS_VINCULO": "727.725.3/3",
+        "RF_COM_PONTOS": "727.725.3",
+        "RF_HIFEN_VINCULO": "727.725-3/3",
+        "RF_HIFEN": "727.725-3",
         "TIPO": "EMEI",
         "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "GERALDO SOARES DA SILVA"
+        "VALOR_MATCH": "SILVIA FANTATO FERNANDES"
     },
     {
-        "NOME": "ELAINE CRISTINA FERREIRA",
+        "NOME": "SILVIA FANTATO FERNANDES",
         "UNIDADE": "CEI",
-        "RF": "8877823.0",
-        "RF_VINCULO": "8877823/1",
-        "RF_PONTOS_VINCULO": "887.782.3/1",
-        "RF_COM_PONTOS": "887.782.3",
-        "RF_HIFEN_VINCULO": "887.782-3/1",
-        "RF_HIFEN": "887.782-3",
+        "RF": "7277253.0",
+        "RF_VINCULO": "7277253/2",
+        "RF_PONTOS_VINCULO": "727.725.3/2",
+        "RF_COM_PONTOS": "727.725.3",
+        "RF_HIFEN_VINCULO": "727.725-3/2",
+        "RF_HIFEN": "727.725-3",
         "TIPO": "CEI",
         "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "ELAINE CRISTINA FERREIRA"
-    },
-    {
-        "NOME": "VICTORIA GOMIERO DE SOUZA",
-        "UNIDADE": "CEI",
-        "RF": "9456813.0",
-        "RF_VINCULO": "9456813/1",
-        "RF_PONTOS_VINCULO": "945.681.3/1",
-        "RF_COM_PONTOS": "945.681.3",
-        "RF_HIFEN_VINCULO": "945.681-3/1",
-        "RF_HIFEN": "945.681-3",
-        "TIPO": "CEI",
-        "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "VICTORIA GOMIERO DE SOUZA"
-    },
-    {
-        "NOME": "VICTÓRIA GOMIERO DE SOUZA",
-        "UNIDADE": "CEI",
-        "RF": "9456813.0",
-        "RF_VINCULO": "9456813/1",
-        "RF_PONTOS_VINCULO": "945.681.3/1",
-        "RF_COM_PONTOS": "945.681.3",
-        "RF_HIFEN_VINCULO": "945.681-3/1",
-        "RF_HIFEN": "945.681-3",
-        "TIPO": "CEI",
-        "MATCH_CAMPO": "NOME",
-        "VALOR_MATCH": "VICTORIA GOMIERO DE SOUZA"
+        "VALOR_MATCH": "SILVIA FANTATO FERNANDES"
     }
 ]
