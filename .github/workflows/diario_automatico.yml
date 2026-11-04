@@ -5,13 +5,13 @@ on:
     branches:
       - main
   workflow_dispatch:
-  schedule:
+  # schedule:
     # 06:30 BRT
-    - cron: '30 08 * * 1-5'
+    # - cron: '30 08 * * 1-5'
     # 07:30 BRT 
-    - cron: '30 09 * * 1-5'
+    # - cron: '30 09 * * 1-5'
     # 08:30 BRT 
-    - cron: '30 10 * * 1-5'
+    # - cron: '30 10 * * 1-5'
 
 jobs:
   executar-e-deploy:
